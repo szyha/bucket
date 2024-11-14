@@ -3,7 +3,7 @@
     "description": "App that allows you to AFK mine timed Twitch drops, with automatic drop claiming and channel switching",
     "homepage": "https://github.com/DevilXD/TwitchDropsMiner",
     "license": "MIT",
-    "url": "https://github.com/DevilXD/TwitchDropsMiner/releases/download/dev-build/Twitch.Drops.Miner.Windows.zip",
+    "url": "https://nightly.link/DevilXD/TwitchDropsMiner/actions/runs/11785638249/Twitch.Drops.Miner.Windows.zip",
     "hash": "b2b2026c1aa8105236d2af19d62657b60784f8273b88a7bc7a733e6111087d75",
     "extract_dir": "Twitch Drops Miner",
     "pre_install": [
@@ -23,12 +23,19 @@
         "cookies.jar"
     ],
     "checkver": {
-        "url": "https://api.github.com/repositories/434668441/actions/workflows/ci.yml/runs?branch=master&status=success",
-        "jsonpath": "$.workflow_runs[0].head_sha",
-        "regex": "(?<sha>\\A[a-f\\d]{0,7})",
-        "replace": "16-${sha}"
+        "script": [
+            "$url = 'https://api.github.com/repositories/434668441/actions/workflows/ci.yml/runs?branch=master&status=success&per_page=1&exclude_pull_requests=true'",
+            "$cont = Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri $url",
+            "$workflow_run = $cont.workflow_runs[0]",
+            "$commit = $workflow_run.head_sha.Trim().SubString(0,7)",
+            "$created_date = ([DateTime]$workflow_run.created_at).ToUniversalTime().ToString('yyyyMMddHHmmss')",
+            "$id = $workflow_run.id",
+            "Write-Output ('commit:\"' + $commit + '\"') ('date:\"' + $created_date + '\"') ('id:\"' + $id + '\"')"
+        ],
+        "regex": "commit:\"(?<commit>[\\w\\d]+)\"\\sdate:\"(?<date>\\d+)\"\\sid:\"(?<id>\\d+)\"",
+        "replace": "${date}+${commit}"
     },
     "autoupdate": {
-        "url": "https://github.com/DevilXD/TwitchDropsMiner/releases/download/dev-build/Twitch.Drops.Miner.Windows.zip"
+        "url": "https://nightly.link/DevilXD/TwitchDropsMiner/actions/runs/$matchId/Twitch.Drops.Miner.Windows.zip"
     }
 }
