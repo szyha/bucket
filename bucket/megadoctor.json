@@ -30,7 +30,7 @@
     "checkver": "github",
     "autoupdate": {
         "url": [
-            "https://github.com/tonikelope/megadoctor/releases/download/v$version/MegaDoctor_$version.jar#/MegaDoctor.jar"
+            "https://github.com/tonikelope/megadoctor/releases/download/v$version/MegaDoctor-$version.jar#/MegaDoctor.jar"
         ]
     }
 }
