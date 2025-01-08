@@ -18,7 +18,7 @@
         "if (!(Test-Path \"$persist_dir\\config.toml\")) { New-Item \"$dir\\session.db\" | Out-Null }",
     ],
     "bin": "teldrive.exe",
-	"persist": [
+    "persist": [
         "session.db",
         "config.toml"
     ],
