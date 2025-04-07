@@ -1,20 +1,20 @@
 {
-    "version": "1.8.0",
+    "version": "1.8.1",
     "description": "Standalone client for proxies of Opera VPN",
     "homepage": "https://github.com/Snawoot/opera-proxy",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Snawoot/opera-proxy/releases/download/v1.8.0/opera-proxy.windows-amd64.exe#/opera-proxy.exe",
-            "hash": "91755770195593ca4168b971cb6e2250e0471152381d7d551a4e2c8f4d5dbb9a"
+            "url": "https://github.com/Snawoot/opera-proxy/releases/download/v1.8.1/opera-proxy.windows-amd64.exe#/opera-proxy.exe",
+            "hash": "db4c13490c9a7f9581211322b62830be492dc1e3a806321b55381ebbd8355c81"
         },
         "32bit": {
-            "url": "https://github.com/Snawoot/opera-proxy/releases/download/v1.8.0/opera-proxy.windows-386.exe#/opera-proxy.exe",
-            "hash": "d082fde3f5b5a8d25a16a763a55abe98c56db305061169da271bcff017159b6b"
+            "url": "https://github.com/Snawoot/opera-proxy/releases/download/v1.8.1/opera-proxy.windows-386.exe#/opera-proxy.exe",
+            "hash": "ea52c93785fd30c58f4c287924b432db56c5eb0aca0cb47c586b5bcf7a275956"
         },
         "arm64": {
-            "url": "https://github.com/Snawoot/opera-proxy/releases/download/v1.8.0/opera-proxy.windows-arm.exe#/opera-proxy.exe",
-            "hash": "532af906a76ddcf42cd28aed4f3ce237a39e36979d8ac74d693bd8e8b1397976"
+            "url": "https://github.com/Snawoot/opera-proxy/releases/download/v1.8.1/opera-proxy.windows-arm.exe#/opera-proxy.exe",
+            "hash": "b06fc54e9bf075f88d0ec89a3a629294409f210f134773d7139d1da0b66be1bb"
         }
     },
     "bin": "opera-proxy.exe",
