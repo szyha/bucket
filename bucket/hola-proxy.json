@@ -1,20 +1,20 @@
 {
-    "version": "1.15.1",
+    "version": "1.15.2",
     "description": "Standalone Hola proxy client",
     "homepage": "https://github.com/Snawoot/hola-proxy",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Snawoot/hola-proxy/releases/download/v1.15.1/hola-proxy.windows-amd64.exe#/hola-proxy.exe",
-            "hash": "976f75bfc041fbea4900f9ec876ddc147219edc3d3f86019121675b685ffad83"
+            "url": "https://github.com/Snawoot/hola-proxy/releases/download/v1.15.2/hola-proxy.windows-amd64.exe#/hola-proxy.exe",
+            "hash": "c31b7d2e7318a1df60001c8697082ef6739226c73191e687fcbf0c98f10e3b2e"
         },
         "32bit": {
-            "url": "https://github.com/Snawoot/hola-proxy/releases/download/v1.15.1/hola-proxy.windows-386.exe#/hola-proxy.exe",
-            "hash": "eb52969eb8fa80c4826cf80198cb28baade765ad8bf97885a0d0d0efa628ca9f"
+            "url": "https://github.com/Snawoot/hola-proxy/releases/download/v1.15.2/hola-proxy.windows-386.exe#/hola-proxy.exe",
+            "hash": "f32ccd37cc21f1d7d239f42f44552cc8703d54ab7888a87b88f44f9df4fe12e2"
         },
         "arm64": {
-            "url": "https://github.com/Snawoot/hola-proxy/releases/download/v1.15.1/hola-proxy.windows-arm.exe#/hola-proxy.exe",
-            "hash": "3e8ac080a2c929e76d87b48e70ec9047f35e11ca8221418c93a1c2955b0e4c1c"
+            "url": "https://github.com/Snawoot/hola-proxy/releases/download/v1.15.2/hola-proxy.windows-arm.exe#/hola-proxy.exe",
+            "hash": "359fd68b69a7d3021dc5a4c920dbb8353a46b652bb1699284a6cd5c8d9f7fc28"
         }
     },
     "bin": "hola-proxy.exe",
