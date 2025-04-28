@@ -11,7 +11,23 @@
             "Discounted Udemy Course Enroller (GUI)"
         ]
     ],
-    "pre_install": "if (!(Test-Path \"$persist_dir\\duce-gui-settings.json\")) { Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/techtanic/Discounted-Udemy-Course-Enroller/v$version/default-duce-gui-settings.json\" -OutFile \"$dir\\duce-gui-settings.json\" }",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\duce-gui-settings.json\")) {",
+        "Write-Host \"\nConfig file not found. Attempting to download the default configuration file...\"",
+        "try {",
+        "Invoke-WebRequest -Uri \"https://raw.githubusercontent.com/techtanic/Discounted-Udemy-Course-Enroller/v$version/default-duce-gui-settings.json\" -OutFile \"$dir\\duce-gui-settings.json\" -ErrorAction Stop",
+        "if (Test-Path \"$dir\\duce-gui-settings.json\") {",
+        "Write-Host \"\nDefault configuration file downloaded successfully.\"",
+        "} else {",
+        "Write-Error \"\nDownload completed, but the file is missing. Please check permissions or disk space.\"",
+        "}",
+        "} catch {",
+        "Write-Error \"\nFailed to download the default configuration file. Error: $_\"",
+        "}",
+        "} else {",
+        "Write-Host \"\nConfig file already exists. Skipping download.\"",
+        "}"
+    ],
     "persist": [
         "Courses",
         "duce-gui-settings.json"
