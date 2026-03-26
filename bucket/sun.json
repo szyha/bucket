@@ -1,0 +1,15 @@
+{
+    "version": "0.5.0",
+    "description": "The C++ build system that just works",
+    "homepage": "https://calamity.inc/sun",
+    "license": "MIT",
+    "url": "https://github.com/calamity-inc/Sun/releases/download/0.5.0/Windows.X64.zip",
+    "hash": "3c2c83ed03e3bb3eeebeb39d556e7e5a258815c998f740c85af7ecb5600f083e",
+    "bin": "sun.exe",
+    "checkver": {
+        "github": "https://github.com/calamity-inc/Sun"
+    },
+    "autoupdate": {
+        "url": "https://github.com/calamity-inc/Sun/releases/download/$version/Windows.X64.zip"
+    }
+}
