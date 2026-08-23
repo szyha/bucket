@@ -1,0 +1,35 @@
+{
+    "version": "1.29.0",
+    "description": "Standalone client for proxies of Opera VPN",
+    "homepage": "https://github.com/Alexey71/opera-proxy",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Alexey71/opera-proxy/releases/download/v1.29.0/opera-proxy.windows-amd64.exe#/opera-proxy.exe",
+            "hash": "b752a062cbb67390573eb7fe9a63d6c4a6aec0a57a58679b8b4a7d32e8b8773e"
+        },
+        "32bit": {
+            "url": "https://github.com/Alexey71/opera-proxy/releases/download/v1.29.0/opera-proxy.windows-386.exe#/opera-proxy.exe",
+            "hash": "e8ec1e8ff16472f2f68f757663094757db62e7bffa2f5aec3f28cf1923e7ddf3"
+        },
+        "arm64": {
+            "url": "https://github.com/Alexey71/opera-proxy/releases/download/v1.29.0/opera-proxy.windows-arm64.exe#/opera-proxy.exe",
+            "hash": "54992cd0574534133a90f7ffac59fd056d1ab614a603b02ef8d46ebdca70fe84"
+        }
+    },
+    "bin": "opera-proxy.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Alexey71/opera-proxy/releases/download/v$version/opera-proxy.windows-amd64.exe#/opera-proxy.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/Alexey71/opera-proxy/releases/download/v$version/opera-proxy.windows-386.exe#/opera-proxy.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/Alexey71/opera-proxy/releases/download/v$version/opera-proxy.windows-arm64.exe#/opera-proxy.exe"
+            }
+        }
+    }
+}
